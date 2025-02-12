@@ -1,21 +1,24 @@
 # AI_for_ECG
 
-**Курсовая работа 2023 - 2024**
+**Course Work 2023 - 2024**
 
-Программы и модели для анализа данных холтеровского мониторинга с использованием методов машинного обучения.
+A project focused on analyzing Holter monitoring data using machine learning methods to detect anomalies related to ST-segment changes in ECG signals.
 
-## О проекте
+## About the Project
 
-Проект направлен на анализ данных холтеровского мониторинга с целью выявления аномалий, связанных с изменением ST-сегмента в ЭКГ. Основные задачи проекта включают:
-- Расчет частоты сердечных сокращений.
-- Создание спектрограммы данных холтеровского мониторинга.
-- Разделение 24-часовых записей на отдельные удары сердца.
-- Разработка и обучение моделей для поиска аномалий в данных ЭКГ.
+The goal of this project is to develop a system for analyzing ECG data to detect abnormal conditions such as myocardial infarction or ischemia by identifying changes in the ST-segment. The system utilizes machine learning to process 24-hour ECG recordings and detect anomalous heartbeats.
 
-## Модели
+## Tasks
 
-1. **Сверточная нейронная сеть (CNN)**:  
-   Используется для бинарной классификации отдельных ударов сердца с целью выявления аномалий.
+- Calculate heart rate variability.
+- Create spectrograms of Holter monitoring data.
+- Segment 24-hour recordings into individual heartbeats.
+- Develop and train models to detect anomalies in ECG signals.
 
-2. **Автокодировщик на основе LSTM**:  
-   Автокодировщик используется для поиска аномалий во временном ряду. Модель обучается на нормальных данных, и в случае появления аномалий ошибка восстановления увеличивается, что указывает на потенциальные отклонения.
+## Models
+
+1. **Convolutional Neural Network (CNN)**  
+   This model is used for binary classification of heartbeats to identify anomalies. It is trained on normal data and classifies each heartbeat as either normal or abnormal.
+
+2. **LSTM-based Autoencoder**  
+   Used for anomaly detection in time-series data. The model is trained on normal data, and when anomalies appear, the reconstruction error increases, signaling potential deviations.
